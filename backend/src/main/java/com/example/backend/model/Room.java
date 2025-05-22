@@ -1,5 +1,4 @@
 package com.example.backend.model;
-
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,4 +19,8 @@ public class Room {
     @ManyToOne
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
+
+    public String getName() {
+        return null;
+    }
 }
