@@ -19,6 +19,6 @@ public class HotelDTO {
         this.id = hotel.getId();
         this.name = hotel.getName();
         this.address = hotel.getAddress();
-       // this.imageUrl = hotel.getImageUrl(); // Asegúrate que exista en tu modelo
+        this.imageUrl = hotel.getImageUrl(); // Asegúrate que exista en tu modelo
     }
 }

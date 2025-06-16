@@ -24,6 +24,6 @@ public class RestaurantDTO {
         this.address = restaurant.getAddress();
         this.phone = restaurant.getPhone();
         this.description = restaurant.getDescription();
-        this.imageUrl = restaurant.getImageUrl(); // Si tienes
+        this.imageUrl = restaurant.getImageUrl();
     }
 }

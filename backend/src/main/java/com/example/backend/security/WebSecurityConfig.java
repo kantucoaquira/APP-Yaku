@@ -58,6 +58,10 @@ public class WebSecurityConfig {
                         .requestMatchers("/uploads/**").permitAll()
                         .requestMatchers("/api/users/**").hasRole("SUPERADMIN") // Solo superadmins para usuarios
                         .requestMatchers("/api/hotels/**").hasAnyRole("SUPERADMIN", "ADMIN") // Hoteles para admin y superadmin
+                        .requestMatchers("/api/rooms/**").authenticated()
+                        .requestMatchers("/api/menus/**").authenticated()
+
+
 
                         .anyRequest().authenticated()
                 )

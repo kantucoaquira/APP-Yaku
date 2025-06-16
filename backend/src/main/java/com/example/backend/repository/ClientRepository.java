@@ -1,7 +1,14 @@
 package com.example.backend.repository;
 
-
 import com.example.backend.model.Client;
+import com.example.backend.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ClientRepository extends JpaRepository<Client, Long> {}
+import java.util.Optional;
+
+public interface ClientRepository extends JpaRepository<Client, Long> {
+    Optional<Client> findByUser(User user);
+    Optional<Client> findByUserId(Long userId);
+
+
+}

@@ -1,5 +1,6 @@
 package com.example.backend.service;
 
+import com.example.backend.model.Client;
 import com.example.backend.model.Reservation;
 import com.example.backend.repository.ReservationRepository;
 import lombok.RequiredArgsConstructor;
@@ -28,5 +29,13 @@ public class ReservationService {
 
     public void delete(Long id) {
         reservationRepository.deleteById(id);
+    }
+
+    public Reservation update(Reservation reservation) {
+        // Aquí puedes hacer lógica adicional si quieres
+        return reservationRepository.save(reservation);
+    }
+    public List<Reservation> findByClient(Client client) {
+        return reservationRepository.findByClient(client);
     }
 }
